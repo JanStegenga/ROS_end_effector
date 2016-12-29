@@ -1,0 +1,7 @@
+package rs;
+
+message Button
+{
+  required int32   id      = 1;
+  required bool    pressed = 2;
+}

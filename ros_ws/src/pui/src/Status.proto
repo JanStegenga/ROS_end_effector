@@ -1,0 +1,40 @@
+package rs;
+
+message Status
+{
+  required SystemMode           currentSystemMode            =  1;
+  required int32                vehicleBatteryHealth         =  2;
+  required bool                 vehicleClampStatus           =  3;
+  required VehicleCameraStatus  vehicleCameraStatus          =  4;
+  required bool                 manipulatorMagnetStatus      =  5;
+  required bool                 manipulatorMagnetLatchStatus =  6;
+  required int32                layerThicknessMeasurement    =  7;
+  required int32                vehiclePositionAlongRail     =  8;
+  required int32                vehicleSpeed                 =  9;
+  required ErrorID              errorId                      = 10;
+}
+
+enum SystemMode
+{
+   Vehicle          = 1;
+   LargeManipulator = 2;
+   SmallManipulator = 3;
+}
+
+enum VehicleCameraStatus
+{
+   Stow      = 1;
+   Forward   = 2;
+   Panoramic = 3;
+}
+
+enum ErrorID
+{
+   NoError          = 1;
+   Low_bat          = 2;
+   Clamp            = 3;
+   Magnet           = 4;
+   Connection       = 5;
+   State_infeasible = 6;
+   Unknown          = 7;
+}

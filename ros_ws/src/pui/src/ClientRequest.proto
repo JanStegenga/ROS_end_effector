@@ -1,0 +1,30 @@
+package rs;
+
+import "Button.proto";
+import "Mouse3D.proto";
+import "Status.proto";
+import "VehicleOrientation.proto";
+
+
+message ClientRequest
+{
+  required string   id                             = 1;
+  repeated Mouse3D  mouse3d                        = 2;
+  repeated Button   buttons                        = 3;
+  optional bool     requestStatus                  = 4;
+  optional bool     requestVehicleCameraStream     = 5;
+  optional bool     requestManipulatorCameraStream = 6;
+  optional bool     requestVehicleOrientation      = 7;
+}
+
+message ServerResponse
+{
+  required string              id                              = 1;
+  optional string              error                           = 2;
+  // response data can be added here as optional data fields
+  optional Status              status                          = 3;
+  optional string              vehicleCameraStream             = 4;
+  optional string              manipulatorCameraStream         = 5;
+  optional VehicleOrientation  vehicleOrientation              = 6;
+}
+

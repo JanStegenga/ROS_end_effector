@@ -1,0 +1,12 @@
+package rs;
+
+message Mouse3D
+{
+  required int32   id = 1;
+  required int32    x = 2;
+  required int32    y = 3;
+  required int32    z = 4;
+  required int32   rx = 5;
+  required int32   ry = 6;
+  required int32   rz = 7;
+}

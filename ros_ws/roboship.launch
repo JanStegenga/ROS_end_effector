@@ -1,0 +1,10 @@
+<launch>
+
+<param name="/end_effector_device"	value="/dev/ttyUSB2" />
+<param name="/pui_host"			value="192.168.2.111" />
+<param name="/pui_port"			value="55557" />
+
+<node pkg="pui"	name="puinode" type="puinode.py" />
+<node pkg="end_effector"	name="end_effectornode" type="end_effectornode.py" />
+
+</launch>

@@ -1,0 +1,12 @@
+package rs;
+
+message VehicleOrientation
+{
+  required int32  manipulator1Angle   = 1;
+  required int32  manipulator2Angle   = 2;
+  required int32  manipulator3Angle   = 3;
+  required int32  manipulator4Angle   = 4;
+  required int32  manipulator5Angle   = 5;
+  required int32  manipulator6Angle   = 6;
+  required int32  manipulator7Angle   = 7;
+}
